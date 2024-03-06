@@ -18,6 +18,9 @@ In the E-news application, we utilize the News API to fetch news articles from d
 - View the latest headlines and read full articles from trusted sources.
 - Search for specific topics using the search bar.
 
+- <img width="1051" alt="image" src="https://github.com/yeshwanth720/E-News-Application/assets/98077145/c789bcaa-2bb4-4f45-b370-f5f19ad23199">
+
+
 ## Technologies Used
 
 The E-news application is built using the following technologies:
