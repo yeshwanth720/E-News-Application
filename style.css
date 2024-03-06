@@ -1,0 +1,236 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Roboto:wght@500&display=swap");
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-text-color: #ffffff;
+    --secondary-text-color: #bfbfbf;
+    --accent-color: #ff7f50;
+    --accent-color-dark: #cc5500;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    color: var(--primary-text-color);
+    background-color: #000000;
+}
+
+p {
+    font-family: "Roboto", sans-serif;
+    color: var(--secondary-text-color);
+    line-height: 1.4rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+.container {
+    max-width: 1180px;
+    margin-inline: auto;
+    overflow: hidden;
+}
+
+nav {
+    background: linear-gradient(180deg, rgba(17,17,17,0.9) 0%, rgba(0,0,0,0.7) 100%);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+    position: fixed;
+    top: 0;
+    z-index: 99;
+    left: 0;
+    right: 0;
+    transition: background-color 0.3s ease;
+}
+
+.main-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+.company-logo img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+.company-logo img:hover {
+    transform: scale(1.1);
+}
+
+.nav-links {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.nav-links ul {
+    align-items: space-around;
+    display: flex;
+}
+
+.nav-links ul li {
+    /* margin-right: 1.5rem; */
+    transition: transform 0.3s ease;
+    margin-left:1.5rem;
+}
+
+.nav-links ul li:hover {
+    transform: translateY(-2px);
+}
+
+.hover-link {
+    cursor: pointer;
+}
+
+.hover-link:hover {
+    color: var(--accent-color);
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    margin-right: 1rem;
+}
+
+.news-input {
+    width: 200px;
+    height: 32px;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 20px;
+    background-color: #333333;
+    color: #ffffff;
+}
+
+.search-button {
+    background-color: var(--accent-color);
+    color: #ffffff;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-left: 0.4rem;
+}
+
+.search-button:hover {
+    background-color: var(--accent-color-dark);
+}
+
+main {
+    padding: 2rem;
+    margin-top: 80px;
+}
+
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    width: calc(33.33% - 20px);
+    min-height: 400px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card-header img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.card-content {
+    padding: 1rem;
+}
+
+.news-source {
+    margin-top: 1rem;
+    color: var(--accent-color);
+}
+
+@media screen and (max-width: 768px) {
+    .main-nav {
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .nav-links ul li {
+        margin-right: 0;
+        margin-bottom: 0.5rem;
+    }
+    
+    .search-bar {
+        margin: 1rem auto 0;
+    }
+    
+    .cards-container {
+        justify-content: center;
+    }
+    
+    .card {
+        width: calc(50% - 20px);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .nav-links ul {
+        flex-direction: column;
+    }
+    
+    .search-bar {
+        width: 100%;
+        margin: 1rem auto 0;
+    }
+    
+    .news-input {
+        width: calc(100% - 44px);
+    }
+    
+    .search-button {
+        width: calc(100% - 8px);
+        margin-left: 0;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .card {
+        width: calc(100% - 20px);
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .card {
+        width: calc(100% - 20px);
+        min-height: 200px;
+    }
+}
